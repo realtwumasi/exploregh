@@ -124,7 +124,7 @@ li {
 strong {
   color: #1976d2;
 }
-footer {
+/* footer {
   background: #1a2233;
   color: #f5f6fa;
   text-align: center;
@@ -132,7 +132,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-}
+} */
 .accordion{
    background: #ffffff; 
   border-radius: 12px;
@@ -260,7 +260,7 @@ h2 {
   text-decoration: none;
   transition: color 0.2s;
 }
-footer {
+/* footer {
   background: #1a1a1a;
   color: #f2f2f2;
   padding: 32px 0 16px 0;
@@ -306,7 +306,84 @@ footer p {
     gap: 0;
   }
   .footer-col {
+    margin: 0 0 24px 0; */
+/*     min-width: unset;
+  }
+} */
+/* ...existing CSS... */
+
+/* Footer styles unified for all pages except index.html (which uses .index-footer) */
+footer {
+  background: #1a1a1a;
+  color: #f2f2f2;
+  padding: 32px 0 16px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  border-top: 4px solid #eab308;
+}
+
+footer.index-footer {
+  background: linear-gradient(90deg, #1a2233 0%, #1976d2 100%);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 32px;
+}
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 220px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer a {
+  color: #eab308;
+  text-decoration: none;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+footer a:hover {
+  color: #fffbe6;
+  text-decoration: underline;
+}
+footer p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  .footer-col {
     margin: 0 0 24px 0;
     min-width: unset;
   }
 }
+
+/* Responsive: for pages except index, add improvements here for mobile */
+@media (max-width: 700px) {
+  .contact-form,
+  .accordion,
+  .festivals,
+  .main-content,
+  .panel {
+    width: 98vw !important;
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+    box-sizing: border-box;
+  }
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+}
+/* You can add more responsive rules for forms, tables, panels, etc as needed */
